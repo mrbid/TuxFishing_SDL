@@ -22,5 +22,5 @@ modules:
       - install -Dm 0644 flat/tuxfishing.png ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/tuxfishing.png
     sources:
       - type: git
-        url: https://github.com/BeverlyCode/TuxFishing_SDL.git
-        commit: 55bd233f563f30204fdc08159df1050503bd7762
+        url: https://github.com/mrbid/TuxFishing_SDL.git
+        commit: a25de181789e0a1036df299b96ccb18e1324b474
