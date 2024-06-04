@@ -1,0 +1,26 @@
+app-id: com.voxdsp.TuxFishing
+runtime: org.freedesktop.Platform
+runtime-version: '23.08'
+sdk: org.freedesktop.Sdk
+command: tuxfishing
+rename-icon: tuxfishing
+rename-desktop-file: tuxfishing.desktop
+rename-appdata-file: tuxfishing.appdata.xml
+finish-args:
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --share=ipc
+  - --device=dri
+modules:
+  - name: tuxfishing
+    buildsystem: simple
+    build-commands:
+      - cc main.c -I inc -lSDL2 -lGLESv2 -lEGL -Ofast -lm -o tuxfishing
+      - install -Dm 0755 tuxfishing -t ${FLATPAK_DEST}/bin
+      - install -Dm 0644 flat/tuxfishing.desktop ${FLATPAK_DEST}/share/applications/tuxfishing.desktop
+      - install -Dm 0644 flat/tuxfishing.appdata.xml ${FLATPAK_DEST}/share/metainfo/tuxfishing.appdata.xml
+      - install -Dm 0644 flat/tuxfishing.png ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/tuxfishing.png
+    sources:
+      - type: git
+        url: https://github.com/BeverlyCode/TuxFishing_SDL.git
+        commit: 55bd233f563f30204fdc08159df1050503bd7762
