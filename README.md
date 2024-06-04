@@ -12,7 +12,6 @@
 ## build
 ```
 sudo apt install --assume-yes libsdl2-dev libsdl2-2.0-0
-sudo apt install --assume-yes tcc
 sudo apt install --assume-yes upx-ucl
 make
 ./release/TuxFishing_linux
