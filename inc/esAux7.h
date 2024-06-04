@@ -167,11 +167,6 @@ void esDebug(const GLuint state)
     }
     void esRenderModel()
     {
-        if(esModelArray[esBoundModel].itp != GL_UNSIGNED_INT && esModelArray[esBoundModel].itp != GL_UNSIGNED_SHORT && esModelArray[esBoundModel].itp != GL_UNSIGNED_BYTE)
-        {
-            printf("!!! [%u]: %u\n", esBoundModel, esModelArray[esBoundModel].itp);
-            //exit(0);
-        }
         glDrawElements(GL_TRIANGLES, esModelArray[esBoundModel].ni, esModelArray[esBoundModel].itp, 0);
     }
     /// above is; bind it, draw a few instances of it. ... below is ... bind it, draw it, draw something different.
@@ -191,12 +186,6 @@ void esDebug(const GLuint state)
 
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, esModelArray[id].iid);
 
-        if(esModelArray[id].itp != GL_UNSIGNED_INT && esModelArray[id].itp != GL_UNSIGNED_SHORT && esModelArray[id].itp != GL_UNSIGNED_BYTE)
-        {
-            printf("!!! [%u]: %u\n", id, esModelArray[id].itp);
-            //exit(0);
-        }
-
         glDrawElements(GL_TRIANGLES, esModelArray[id].ni, esModelArray[id].itp, 0);
     }
     void esBindRenderF(const uint id) // for Fullbright
@@ -210,12 +199,6 @@ void esDebug(const GLuint state)
         glEnableVertexAttribArray(color_id);
 
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, esModelArray[id].iid);
-
-        if(esModelArray[id].itp != GL_UNSIGNED_INT && esModelArray[id].itp != GL_UNSIGNED_SHORT && esModelArray[id].itp != GL_UNSIGNED_BYTE)
-        {
-            printf("!!! [%u]: %u\n", id, esModelArray[id].itp);
-            //exit(0);
-        }
 
         glDrawElements(GL_TRIANGLES, esModelArray[id].ni, esModelArray[id].itp, 0);
     }
