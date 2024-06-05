@@ -1,3 +1,5 @@
+### This is not a maintained build, for the latest version please go [here](https://github.com/mrbid/TuxFishing).
+
 # Tux Fishing (SDL)
 
 [![Screenshot of the Tux Fishing game](https://raw.githubusercontent.com/mrbid/TuxFishing/main/screenshot.png)](https://www.youtube.com/watch?v=HMdYRCAhrAs)
