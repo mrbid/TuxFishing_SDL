@@ -1,4 +1,4 @@
-### This is not a maintained build, for the latest version please go [here](https://github.com/mrbid/TuxFishing).
+### ⚠️ This is not a maintained build, for the latest version please go [here](https://github.com/mrbid/TuxFishing).
 
 # Tux Fishing (SDL)
 
