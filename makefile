@@ -9,7 +9,9 @@ all:
 	upx --lzma --best release/$(name)_linux
 
 web:
+	source ~/emsdk/emsdk_env.sh
 	emcc main.c -DWEB -O3 --closure 0 -s FILESYSTEM=0 -s USE_SDL=2 -s ENVIRONMENT=web -s TOTAL_MEMORY=256MB -I inc -o web/index.html --shell-file t.html
+	emrun web/index.html
 
 test:
 	gcc main.c -I inc -Ofast -lSDL2 -lGLESv2 -lEGL -lm -o /tmp/$(name)_test
